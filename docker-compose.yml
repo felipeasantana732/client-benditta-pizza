@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  benditta-cliente-nextjs:
+    image: benditta-cliente-nextjs:1.0.0
+    build: .
+    container_name: benditta-cliente-nextjs
+    restart: unless-stopped
+    networks:
+      - BendittaNet
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=BendittaNet"
+      - "traefik.http.routers.benditta-cliente.rule=Host(`bendittapizzagyn.com.br`)"
+      - "traefik.http.routers.benditta-cliente.entrypoints=websecure"
+      - "traefik.http.routers.benditta-cliente.tls.certresolver=letsencryptresolver"
+      - "traefik.http.services.benditta-cliente.loadbalancer.server.port=3000"
+
+networks:
+  BendittaNet:
+    external: true
