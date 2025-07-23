@@ -1,0 +1,205 @@
+{
+    "categorias": {
+        "61068c88-90f2-4d2c-85d3-2f0291ae5b4f": {
+            "id": "61068c88-90f2-4d2c-85d3-2f0291ae5b4f",
+            "nome": "❤️ As Queridinhas",
+            "descricao": "As Promos mais pedidas!",
+            "rank": 2,
+            "promocoes": [
+                {
+                    "id": "584dd1ae-7569-4cdf-adff-925a673391f4",
+                    "nome": "Refrigerante Grátis!",
+                    "created_at": "Sat May 24 2025 14:45:11 GMT-0300 (Horário Padrão de Brasília)",
+                    "expiration_date": null,
+                    "active": true,
+                    "preco_original": "10",
+                    "preco_promo": "0",
+                    "imagem_url": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//refri-gratis-1920x1080.jpg",
+                    "descricao": "Retire uma pizza grande no balcão e ganhe um refrigerante de 1,5 Litros grátis! Quanto mais pizzas você retira, mais refri você leva!",
+                    "image_url_small": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//refrigerante-gratis-300x200.png",
+                    "pessoas": null,
+                    "itensCardapio": [],
+                    "dias_semana": [ "Terça", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo"]
+                },
+                {
+                    "id": "700d1286-91c6-4ebf-8045-e09de7818747",
+                    "nome": "Terça da borda",
+                    "created_at": "Thu May 15 2025 18:42:55 GMT-0300 (Horário Padrão de Brasília)",
+                    "expiration_date": null,
+                    "active": true,
+                    "preco_original": "15",
+                    "preco_promo": "00",
+                    "imagem_url": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//borda-gratis-1920x1080.jpg",
+                    "descricao": "Toda terça feira, um sabor diferente de borda recheada grátis! Consulte o sabor do recheio com os atendentes.",
+                    "image_url_small": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//borda-gratis-300x200.png",
+                    "pessoas": null,
+                    "itensCardapio": [ 
+                    ],
+                     "dias_semana": [ "Terça"]
+                },
+                {
+                    "id": "700d1286-91c6-4ebf-8045-e09de8918747",
+                    "nome": "Entrega Grátis",
+                    "created_at": "Thu May 15 2025 18:42:55 GMT-0300 (Horário Padrão de Brasília)",
+                    "expiration_date": null,
+                    "active": true,
+                    "preco_original": "5",
+                    "preco_promo": "0",
+                    "imagem_url": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//frete-gratis-1920x108.png",
+                    "descricao": "Ganhe entrega grátis para qualquer endereço até 2 Kilometros da loja! Distâncias maiores que 2 kilometros da loja devem ser consultadas com os atendentes.",
+                    "image_url_small": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//frete-gratis-300x200.png",
+                    "pessoas": null,
+                    "itensCardapio": [ 
+                    ],
+                     "dias_semana": [ "Terça", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo"]
+                }
+            ]
+        },
+        "7d6fc67c-4309-4726-b07b-5a45f1a08306": {
+            "id": "7d6fc67c-4309-4726-b07b-5a45f1a08609",
+            "nome": "🔥Pizza Do Dia 🍕",
+            "descricao": "Todo dia um Sabor diferente por apenas 45 Reais",
+            "rank": 3,
+            "promocoes": [
+                {
+                    "id": "40b41016-6b56-465b-b83d-cb883b936c6c",
+                    "nome": "Pizza do dia - Frango",
+                    "created_at": "Thu May 22 2025 19:07:25 GMT-0300 (Horário Padrão de Brasília)",
+                    "expiration_date": null,
+                    "active": true,
+                    "preco_original": "59",
+                    "preco_promo": "45",
+                    "imagem_url": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//pizza-do-dia-frango1920x1080.png",
+                    "descricao": "Promoção disponivel somente às quartas! Pizza grande (8 pedaços) de frango com catupiry por apenas 45 reais.",
+                    "image_url_small": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//pizza-do-dia-frango-catupiry300x200.png",
+                    "pessoas": "3 - 4",
+                    "itensCardapio": [ {
+                            "id": "fbb86af7-f6a9-499a-b784-870cf2740a8f",
+                            "nome": "frango com catupiry",
+                            "tipo": "pizza",
+                            "tamanho": null,
+                            "preco": null,
+                            "preco_grande": "59",
+                            "preco_individual": "30",
+                            "ativo": true,
+                            "criado_em": "Thu May 15 2025 14:07:32 GMT-0300 (Horário Padrão de Brasília)",
+                            "categoria_pizza": "especial"
+                        }],
+                    "dias_semana": ["Quarta"]
+                },
+                 {
+                    "id": "700d1286-91c6-4ebf-8045-e09de89187347",
+                    "nome": "Pizza do dia - Calabresa",
+                    "created_at": "Thu May 15 2025 18:42:55 GMT-0300 (Horário Padrão de Brasília)",
+                    "expiration_date": null,
+                    "active": true,
+                    "preco_original": "50",
+                    "preco_promo": "45",
+                    "imagem_url": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//pizza%20do%20dia%20calabresa.jpg",
+                    "descricao": "Promoção disponivel somente ás Sextas e domingos! Pizza grande (8 pedaços) de Calabresa por apenas 45 reais.",
+                    "image_url_small": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//pizza-do-dia-calabresa-300x200.png",
+                    "pessoas": "3 - 4",
+                    "itensCardapio": [
+                        {
+                            "id": "fbb86af7-f6a9-499a-b784-870cf2740a8f",
+                            "nome": "calabresa",
+                            "tipo": "pizza",
+                            "tamanho": null,
+                            "preco": null,
+                            "preco_grande": "50",
+                            "preco_individual": "30",
+                            "ativo": true,
+                            "criado_em": "Thu May 15 2025 14:07:32 GMT-0300 (Horário Padrão de Brasília)",
+                            "categoria_pizza": "tradicional"
+                        }
+                    ],
+                    "dias_semana": ["Sexta", "Domingo"]
+                },
+                {
+                    "id": "700d1286-91c6-4ebf-8045-e09de83287347",
+                    "nome": "Pizza do dia - Mussarela",
+                    "created_at": "Thu May 15 2025 18:42:55 GMT-0300 (Horário Padrão de Brasília)",
+                    "expiration_date": null,
+                    "active": true,
+                    "preco_original": "50",
+                    "preco_promo": "45",
+                    "imagem_url": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//pizza-do-dia-mussarela1920x1080.png",
+                    "descricao": "Promoção disponivel somente ás Terças! Pizza grande (8 pedaços) de Mussarela por apenas 45 reais.",
+                    "image_url_small": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//pizza-do-dia-mussarela300x200.png",
+                    "pessoas": "3 - 4",
+                    "itensCardapio": [
+                        {
+                            "id": "fbb86af7-f6a9-499a-b784-870cf2740a8f",
+                            "nome": "mussarela",
+                            "tipo": "pizza",
+                            "tamanho": null,
+                            "preco": null,
+                            "preco_grande": "50",
+                            "preco_individual": "30",
+                            "ativo": true,
+                            "criado_em": "Thu May 15 2025 14:07:32 GMT-0300 (Horário Padrão de Brasília)",
+                            "categoria_pizza": "tradicional"
+                        }
+                    ],
+                    "dias_semana": ["Terça"]
+                },
+                 {
+                    "id": "700d1286-91c6-4ebf-8045-e09de90187347",
+                    "nome": "Pizza do dia - Lombinho",
+                    "created_at": "Thu May 15 2025 18:42:55 GMT-0300 (Horário Padrão de Brasília)",
+                    "expiration_date": null,
+                    "active": true,
+                    "preco_original": "50",
+                    "preco_promo": "45",
+                    "imagem_url": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//pizza-do-dia-lombinho1920x1080.jpg",
+                    "descricao": "Promoção disponivel somente ás Quintas! Pizza grande (8 pedaços) de lombinho canadense por apenas 45 reais.",
+                    "image_url_small": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//pizza-do-dia-lombinho-300x200.png",
+                    "pessoas": "3 - 4",
+                    "itensCardapio": [
+                        {
+                            "id": "fbb86af7-f6a9-499a-b784-870cf2740a8f",
+                            "nome": "lombinho",
+                            "tipo": "pizza",
+                            "tamanho": null,
+                            "preco": null,
+                            "preco_grande": "50",
+                            "preco_individual": "30",
+                            "ativo": true,
+                            "criado_em": "Thu May 15 2025 14:07:32 GMT-0300 (Horário Padrão de Brasília)",
+                            "categoria_pizza": "tradicional"
+                        }
+                    ],
+                    "dias_semana": ["Quinta"]
+                },
+                 {
+                    "id": "700d1286-91c6-4ebf-8045-e09de80487347",
+                    "nome": "Pizza do dia - Marguerita",
+                    "created_at": "Thu May 15 2025 18:42:55 GMT-0300 (Horário Padrão de Brasília)",
+                    "expiration_date": null,
+                    "active": true,
+                    "preco_original": "50",
+                    "preco_promo": "45",
+                    "imagem_url": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//pizza-do-dia-margherita1920x1080.png",
+                    "descricao": "Promoção disponivel somente aos Sábados! Pizza grande (8 pedaços) de Marguerita por apenas 45 reais.",
+                    "image_url_small": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//pizza-do-dia-margherita300x200.png",
+                    "pessoas": "3 - 4",
+                    "itensCardapio": [
+                        {
+                            "id": "fbb86af7-f6a9-499a-b784-870cf2740a8f",
+                            "nome": "marguerita",
+                            "tipo": "pizza",
+                            "tamanho": null,
+                            "preco": null,
+                            "preco_grande": "50",
+                            "preco_individual": "30",
+                            "ativo": true,
+                            "criado_em": "Thu May 15 2025 14:07:32 GMT-0300 (Horário Padrão de Brasília)",
+                            "categoria_pizza": "tradicional"
+                        }
+                    ],
+                    "dias_semana": ["Sábado"]
+                }
+            ]
+        }
+    }
+}
