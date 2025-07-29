@@ -180,6 +180,7 @@ const Footer: React.FC = () => {
             <li><a href="#home">Home</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="/privacidade">Politica de privacidade</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </FooterLinks>
@@ -208,10 +209,12 @@ const Footer: React.FC = () => {
             </a>
           </SocialLinks>
         </FooterContact>
-      </FooterContent>
+      </FooterContent>  
+
+
       
       <Copyright>
-        <p>&copy; {new Date().getFullYear()} Benditta Pizza. Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Benditta Pizza | 53.367.585/0001-49. <br /> Todos os direitos reservados.</p>
       </Copyright>
     </FooterContainer>
   );

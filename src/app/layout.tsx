@@ -1,6 +1,7 @@
 import StyledComponentsRegistry from '@/lib/styled-components-registry'; 
 import { Poppins } from "next/font/google"; 
 import './globals.css'; 
+import CookieConsentBanner from '@/components/CookieConsentBanner';
 
 
 const poppins = Poppins({
@@ -27,6 +28,7 @@ export default function RootLayout({
       
       <body className={`${poppins.variable} antialiased`}> 
        <StyledComponentsRegistry>
+         <CookieConsentBanner />
             {children} {/* Renderiza o conteúdo da página atual */}
              </StyledComponentsRegistry>
       </body>

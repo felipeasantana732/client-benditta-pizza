@@ -54,6 +54,18 @@ const ListPromos: React.FC = () => {
     fetchPromocoes();
   }, []);
 
+  const normalizeDia = (dia: string) =>
+    dia
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .charAt(0).toUpperCase() +
+    dia
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .slice(1)
+      .toLowerCase();
+
+
   const diaAtual = getDiaSemanaAtual();
 
   return (
@@ -92,12 +104,10 @@ const ListPromos: React.FC = () => {
                   titulo={categoria.nome}
                   promocoes={categoria.promocoes
                     .map((promo) => {
-                      const diasDisponiveis = promo.dias_semana?.map((dia) =>
-                        diasSemanaMap[
-                          dia.charAt(0).toUpperCase() +
-                            dia.slice(1).toLowerCase()
-                        ]
-                      );
+                      const diasDisponiveis = promo.dias_semana?.map((dia) => {
+                        const normalizado = normalizeDia(dia);
+                        return diasSemanaMap[normalizado];
+                      });
                       const isDisponivelHoje =
                         diasDisponiveis?.includes(diaAtual);
                       return { ...promo, isDisponivelHoje };
@@ -106,8 +116,8 @@ const ListPromos: React.FC = () => {
                       a.isDisponivelHoje === b.isDisponivelHoje
                         ? 0
                         : a.isDisponivelHoje
-                        ? -1
-                        : 1
+                          ? -1
+                          : 1
                     )}
                   descricao={categoria.descricao}
                 />

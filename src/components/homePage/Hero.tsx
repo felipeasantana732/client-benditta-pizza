@@ -13,6 +13,10 @@ const HeroContainer = styled.section`
   color: var(--color-white-benditta);
   text-align: center;
   padding-top: 80px;
+
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+  }
 `;
 
 const HeroContent = styled.div`
