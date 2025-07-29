@@ -13,8 +13,11 @@ const poppins = Poppins({
 
 // Metadados da sua aplicação
 export const metadata = {
-  title: '🍕Benditta Pizza',
+  title: 'Benditta Pizza',
   description: 'A melhor pizza com massa de fermentação natural de Goiânia!',
+  icons: {
+    icon: '/favicon.ico', // note o `/` no início
+  },
 };
 
 export default function RootLayout({
@@ -24,7 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    
       
       <body className={`${poppins.variable} antialiased`}> 
        <StyledComponentsRegistry>

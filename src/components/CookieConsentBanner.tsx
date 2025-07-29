@@ -43,6 +43,17 @@ const Button = styled.button`
   &:hover {
     background-color: #ddd;
   }
+
+   &.recusar {
+    background-color: #000;
+    color: #fff;
+  }
+
+  &.aceitar {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+  }
 `;
 
 const CookieConsentBanner: React.FC = () => {
@@ -73,7 +84,10 @@ const CookieConsentBanner: React.FC = () => {
         🍪 Este site usa cookies para melhorar sua experiência. Ao continuar, você concorda com o uso de cookies.
       </BannerText>
       <ButtonGroup>
-        <Button onClick={() => handleConsent(true)}>Aceitar</Button>
+
+        <Button className='aceitar' onClick={() => handleConsent(false)}>Recusar</Button>
+        <Button className='recusar' onClick={() => handleConsent(true)}>Aceitar</Button>
+       
       </ButtonGroup>
     </BannerContainer>
   );
