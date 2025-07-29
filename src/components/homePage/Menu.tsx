@@ -4,7 +4,7 @@ import PDFViewer from "./PDFViewer";
 import Link from "next/link";
 import Carousel from "@/components/carousel/Promos/promosHome/Carousel";
 import styles from "./styleBenditta.module.css";
-import {  Promotion } from "@/types/Promocao";
+import { Promotion } from "@/types/Promocao";
 import { useEffect, useState } from "react";
 import mockData from "../promosPage/mocksPromo.json";
 import { ReloadIcon } from "@radix-ui/react-icons";
@@ -92,6 +92,9 @@ const MenuPDFContainer = styled.div`
   align-items: center;
 `;
 
+const normalizeDia = (dia: string) =>
+  dia.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
 const Menu: React.FC = () => {
   const [promocao, setPromocao] = useState<Promotion[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -106,20 +109,23 @@ const Menu: React.FC = () => {
         const cats = Object.values(data?.categorias ?? {});
         const categoriasArray = z.array(CatPromoSchema).safeParse(cats);
 
-         if (!categoriasArray.success) {
+        if (!categoriasArray.success) {
           throw new Error(
             'Resposta inválida do servidor. Veja os logs para detalhes.'
           );
         }
 
-        const diaAtual = getDiaSemanaAtual();
 
         const promocoesArray = categoriasArray.data.flatMap((categoria) =>
           (categoria.promocoes ?? [])
             .filter((promo) => {
-              const diasDisponiveis = promo.dias_semana?.map((dia) =>
-                diasSemanaMap[dia.charAt(0).toUpperCase() + dia.slice(1).toLowerCase()]
-              );
+              const diasDisponiveis = promo.dias_semana?.map((dia) => {
+                const normalizado = normalizeDia(
+                  dia.charAt(0).toUpperCase() + dia.slice(1).toLowerCase()
+                );
+                return diasSemanaMap[normalizado];
+              });
+              const diaAtual = getDiaSemanaAtual();
               const isDisponivelHoje = diasDisponiveis?.includes(diaAtual);
               return promo.active && isDisponivelHoje;
             })
@@ -158,29 +164,29 @@ const Menu: React.FC = () => {
           </div>
         </main>
 
-  
 
-      <main className={`${styles.container} mx-auto `}>
-        {isLoading && (
-          <div className="container mx-auto py-6 px-4 text-center">
-            <>
-            <ReloadIcon className="mr-auto h-4 w-4 animate-spin ml-auto" />
-            </>
-            Carregando...
-          </div>
-        )}
-        {error && <p>Erro: {error}</p>}
-        {!isLoading &&
-          !error &&
-          promocao.length > 0 &&
-              <Carousel items={promocao} />
-        }
-      </main>
-  
-      <ViewAllPromosLink href="/promos">
-        Ver todas as promoções
-      </ViewAllPromosLink>
-      <Insta />
+
+        <main className={`${styles.container} mx-auto `}>
+          {isLoading && (
+            <div className="container mx-auto py-6 px-4 text-center">
+              <>
+                <ReloadIcon className="mr-auto h-4 w-4 animate-spin ml-auto" />
+              </>
+              Carregando...
+            </div>
+          )}
+          {error && <p>Erro: {error}</p>}
+          {!isLoading &&
+            !error &&
+            promocao.length > 0 &&
+            <Carousel items={promocao} />
+          }
+        </main>
+
+        <ViewAllPromosLink href="/promos">
+          Ver todas as promoções
+        </ViewAllPromosLink>
+        <Insta />
       </MenuContent>
     </MenuContainer>
   );

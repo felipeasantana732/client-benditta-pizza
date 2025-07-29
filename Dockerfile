@@ -1,14 +1,21 @@
-FROM node:20-alpine AS builder
+FROM node:20-alpine AS base
+
+FROM base AS deps
+
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install
+COPY package.json package-lock.json* ./
+RUN npm ci
 
 COPY . .
 RUN npm run build
 
-FROM node:20-alpine AS runner
+FROM base AS production
 WORKDIR /app
+
+ENV NODE_ENV production
+ENV NEXT_SHARP_PATCH "/app/node_modules/sharp"
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/static ./.next/static

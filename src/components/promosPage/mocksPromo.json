@@ -28,7 +28,7 @@
                     "expiration_date": null,
                     "active": true,
                     "preco_original": "15",
-                    "preco_promo": "00",
+                    "preco_promo": "0",
                     "imagem_url": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//borda-gratis-1920x1080.jpg",
                     "descricao": "Toda terça feira, um sabor diferente de borda recheada grátis! Consulte o sabor do recheio com os atendentes.",
                     "image_url_small": "https://lwmxqyglgioiqmsulwet.supabase.co/storage/v1/object/public/promoimages//borda-gratis-300x200.png",
