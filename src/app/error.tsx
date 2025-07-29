@@ -1,5 +1,5 @@
 'use client'
 
 export default function ErrorPage() {
-  return <p>Erro de autenticação.</p>
+  return <p>Erro. Contate o administrador do sistema. </p>
 }
